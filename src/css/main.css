@@ -1,0 +1,66 @@
+.table td, .table th {
+    padding: .1rem;
+    border-top-width: 0px;
+    border-top-style: solid;
+    border-top-color: rgb(222, 226, 230);
+}
+
+/* style table list connect */
+
+tbody.tblistcon {
+    display: block;
+    overflow-y: scroll;
+    height: 50vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+tbody.tblistcon::-webkit-scrollbar{
+    width: 0px;
+}
+
+thead.thlistcon tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+thead.thlistcon, tbody.tblistcon tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+thead.thlistcon {
+    width: calc( 100% - 1em)
+}
+
+i.fa-trash{
+    padding-right: 10px;
+}
+
+/* end style table list connect */
+
+/*Style hover icon*/
+
+tbody.tbshow {
+    display: block;
+    height: 50vh;
+    width: 60vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+thead.thshow tr {
+    display: table;
+
+}
+
+thead.thshow, tbody.tbshow tr {
+    display: table;
+
+}
+
+th.col-3{
+    font-size: 15px;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>BYTESAVE</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+		window.jQuery = window.$ = require('jquery');
+	</script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+		integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+	<script src="./library.js"></script>
+	<div class="container mt-3">
+		<h2 style="text-align: center;">BYTESAVE</h2>
+		<br>
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#home">KẾT NỐI</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu1">SAO LƯU</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu2">PHỤC HỒI</a>
+			</li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div id="home" class="container tab-pane active"><br>
+				<button type="button" class="btn btn-primary" id="myBtn">Thêm Kết Nối</button>
+				<!-- The Modal -->
+				<div class="modal fade" id="myModal" data-backdrop="static" data-keyboard="false" tabindex="-1">
+					<div class="modal-dialog">
+						<div class="modal-content">
+
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h4 class="modal-title">Add New Connect</h4>
+								<button type="button" class="close" data-dismiss="modal">×</button>
+							</div>
+
+							<!-- Modal body -->
+							<div class="modal-body">
+								<form action="" method="POST">
+									<div class="modal-body">
+										<div class="form-group">
+											<label for="name">Name:</label>
+											<input type="text" class="form-control" id="name" value="">
+										</div>
+										<div class="form-group">
+											<label for="keystring">KeyString:</label>
+											<input type="text" class="form-control" id="keystring" value="">
+										</div>
+									</div>
+								</form>
+							</div>
+
+							<!-- Modal footer -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+								<button type="button" class="btn btn-primary" id="btnok">OK</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				</br>
+				<div class="row">
+					<div class="col-4">
+						<h5>Danh Sách Kết Nối</h5>
+						<table class="table table-striped">
+							<thead class="thlistcon">
+							</thead>
+							<tbody class="tblistcon">
+								<!--get all user-->
+								<script src="./js/getAllUser.js"></script>
+
+							</tbody>
+						</table>
+					</div>
+					<div class="col-8">
+						<table class="table">
+							<a id="nameconnect">Quang Thao</a>
+							</br>
+							</br>
+							<tbody class="tbshow">
+								<tr class="d-flex">
+									<td class="col-3">Tài Khoản</td>
+									<td class="col-9" id="usernameconnect"></td>
+								</tr>
+								<tr class="d-flex">
+									<td class="col-3">Trạng Thái</td>
+									<td class="col-9" id="status"></td>
+								</tr>
+								<tr class="d-flex">
+									<td class="col-3">Lưu Lượng Đã Dùng</td>
+									<td class="col-9" id="datause"></td>
+								</tr>
+								<tr class="d-flex">
+									<td class="col-3">Chuỗi Kết Nối</td>
+									<td class="col-9"><p id="connectstring" class="text-break"></p></td>
+								</tr>
+							</tbody>
+						</table>
+						<!--list user connect-->
+						<script src="./listconnect.js"></script>
+					</div>
+				</div>
+			</div>
+			<div id="menu1" class="container tab-pane fade"><br>
+				<form action='' enctype="multipart/form-data" method="POST">
+					<div class="form-group">
+						<input type="file" id="file" value="" class="form-control-file border" name="file"
+							webkitdirectory mozdirectory msdirectory odirectory directory multiple>
+					</div>
+					<button type="submit" id="fileSubmit" class="btn btn-primary">Apply</button>
+					<button type="submit" id="fileSubmit" class="btn btn-primary">Backup Now</button>
+				</form>
+			</div>
+			<div id="menu2" class="container tab-pane fade"><br>
+
+			</div>
+		</div>
+	</div>
+	<script src="./popup.js"></script>
+	<script src="./pathlocal.js"></script>
+</body>
+
+</html>

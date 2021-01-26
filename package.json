@@ -1,0 +1,67 @@
+{
+  "name": "bytesave",
+  "productName": "bytesave",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": "Quang Thao",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "bytesave"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "@azure/abort-controller": "^1.0.2",
+    "@azure/storage-blob": "^12.3.0",
+    "bootstrap": "^4.5.3",
+    "electron-builder": "^22.9.1",
+    "electron-db": "^0.15.7",
+    "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.5.1",
+    "knex": "^0.21.15",
+    "list-contents": "^4.0.3",
+    "multer-azure-storage": "^0.2.0",
+    "network-speed": "^2.1.0",
+    "popper.js": "^1.16.1",
+    "walk": "^2.3.14"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "11.1.1"
+  }
+}
